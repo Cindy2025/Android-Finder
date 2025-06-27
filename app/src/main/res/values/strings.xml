@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Finder</string>
+    <string name="start_tracking">开始追踪</string>
+    <string name="stop_tracking">停止追踪</string>
+    <string name="refresh_data">刷新数据</string>
+    <string name="location">位置</string>
+    <string name="app_usage">应用使用</string>
+    <string name="device_info">设备信息</string>
+    <string name="tracking_service_running">追踪服务正在运行</string>
+    <string name="tracking_service_stopped">追踪服务已停止</string>
+    <string name="permission_required">需要权限</string>
+    <string name="location_permission_required">需要位置权限才能开始追踪</string>
+    <string name="usage_stats_permission_required">需要使用统计权限</string>
+</resources> 
