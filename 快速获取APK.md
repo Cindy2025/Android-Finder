@@ -10,6 +10,11 @@
 5. **Wait for Build**: GitHub will automatically build APK (5-10 minutes)
 6. **Download APK**: Download from Actions page in GitHub repository
 
+### Available Workflows:
+- **Quick Build** (`quick-build.yml`): Fast debug APK build
+- **Full Build** (`android-build.yml`): Debug + Release APKs with GitHub Releases
+- **Basic Build** (`build.yml`): Simple build with caching
+
 ## Method 2: Android Studio (Local Build)
 
 ### Steps:
@@ -48,4 +53,33 @@ After getting APK:
 3. Wait for GitHub auto build
 4. Download APK and install
 
-**Total time**: About 10-15 minutes 
+**For Release Version**:
+1. Go to GitHub repository Actions tab
+2. Select "Android Build & Release" workflow
+3. Click "Run workflow"
+4. Select "release" build type
+5. Enable "Upload to GitHub Release"
+6. Download from Releases page
+
+**Total time**: About 10-15 minutes
+
+## 🔄 Workflow Options
+
+### Quick Build (Recommended for Development)
+- **File**: `quick-build.yml`
+- **Time**: ~5-8 minutes
+- **Output**: Debug APK only
+- **Auto-trigger**: Push to main/master
+
+### Full Build (Recommended for Releases)
+- **File**: `android-build.yml`
+- **Time**: ~8-12 minutes
+- **Output**: Debug + Release APKs
+- **Features**: GitHub Releases, manual dispatch
+- **Auto-trigger**: Push to main/master/develop
+
+### Basic Build
+- **File**: `build.yml`
+- **Time**: ~6-10 minutes
+- **Output**: Debug APK with caching
+- **Auto-trigger**: Push to main/master 
