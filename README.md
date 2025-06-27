@@ -1,121 +1,121 @@
-# Finder - 安卓手机追踪应用
+# Finder - Android Phone Tracking App
 
-一个完全离线的安卓手机追踪应用，无需网络连接即可工作。
+A completely offline Android phone tracking application that works without internet connection.
 
-## 功能特性
+## Features
 
-### 🔍 位置追踪
-- GPS位置记录
-- 位置精度、海拔、速度信息
-- 历史位置数据查看
-- 离线地图支持
+### 🔍 Location Tracking
+- GPS location recording
+- Location accuracy, altitude, speed information
+- Historical location data viewing
+- Offline map support
 
-### 📱 应用使用统计
-- 应用使用时间统计
-- 系统应用和用户应用区分
-- 使用频率分析
-- 应用使用历史记录
+### 📱 App Usage Statistics
+- App usage time tracking
+- System apps and user apps distinction
+- Usage frequency analysis
+- App usage history records
 
-### 🔋 设备信息监控
-- 电池状态监控（电量、温度、电压、充电状态）
-- 存储空间监控（总容量、可用空间）
-- 内存使用情况
-- CPU使用率
-- 网络连接状态
-- WiFi信号强度
-- 设备型号和Android版本
+### 🔋 Device Information Monitoring
+- Battery status monitoring (level, temperature, voltage, charging status)
+- Storage space monitoring (total capacity, available space)
+- Memory usage monitoring
+- CPU usage monitoring
+- Network connection status
+- WiFi signal strength
+- Device model and Android version
 
-### 💾 本地数据存储
-- 使用Room数据库本地存储
-- 无需网络连接
-- 数据加密保护
-- 自动数据清理
+### 💾 Local Data Storage
+- Uses Room database for local storage
+- No internet connection required
+- Data encryption protection
+- Automatic data cleanup
 
-## 技术架构
+## Technical Architecture
 
-- **语言**: Kotlin
-- **架构模式**: MVVM (Model-View-ViewModel)
-- **数据库**: Room Database
-- **UI框架**: Material Design 3
-- **异步处理**: Kotlin Coroutines
-- **依赖注入**: 手动依赖注入
-- **权限管理**: 运行时权限请求
+- **Language**: Kotlin
+- **Architecture Pattern**: MVVM (Model-View-ViewModel)
+- **Database**: Room Database
+- **UI Framework**: Material Design 3
+- **Asynchronous Processing**: Kotlin Coroutines
+- **Dependency Injection**: Manual dependency injection
+- **Permission Management**: Runtime permission requests
 
-## 权限说明
+## Permission Requirements
 
-应用需要以下权限：
+The app requires the following permissions:
 
-### 必需权限
-- `ACCESS_FINE_LOCATION` - 精确位置权限
-- `ACCESS_COARSE_LOCATION` - 粗略位置权限
-- `WRITE_EXTERNAL_STORAGE` - 存储权限
-- `FOREGROUND_SERVICE` - 前台服务权限
-- `FOREGROUND_SERVICE_LOCATION` - 位置前台服务权限
+### Required Permissions
+- `ACCESS_FINE_LOCATION` - Precise location permission
+- `ACCESS_COARSE_LOCATION` - Approximate location permission
+- `WRITE_EXTERNAL_STORAGE` - Storage permission
+- `FOREGROUND_SERVICE` - Foreground service permission
+- `FOREGROUND_SERVICE_LOCATION` - Location foreground service permission
 
-### 可选权限
-- `PACKAGE_USAGE_STATS` - 应用使用统计权限
-- `QUERY_ALL_PACKAGES` - 查询所有应用权限
-- `ACCESS_NETWORK_STATE` - 网络状态权限
-- `ACCESS_WIFI_STATE` - WiFi状态权限
+### Optional Permissions
+- `PACKAGE_USAGE_STATS` - App usage statistics permission
+- `QUERY_ALL_PACKAGES` - Query all apps permission
+- `ACCESS_NETWORK_STATE` - Network state permission
+- `ACCESS_WIFI_STATE` - WiFi state permission
 
-## 安装说明
+## Installation Instructions
 
-1. 确保设备运行Android 7.0 (API 24) 或更高版本
-2. 下载并安装APK文件
-3. 首次启动时授予必要权限
-4. 点击"开始追踪"按钮启动追踪服务
+1. Ensure your device runs Android 7.0 (API 24) or higher
+2. Download and install the APK file
+3. Grant necessary permissions on first launch
+4. Click "Start Tracking" button to start the tracking service
 
-## 使用说明
+## Usage Instructions
 
-### 启动追踪
-1. 打开应用
-2. 点击"开始追踪"按钮
-3. 授予位置权限
-4. 追踪服务将在后台运行
+### Start Tracking
+1. Open the app
+2. Click "Start Tracking" button
+3. Grant location permissions
+4. The tracking service will run in the background
 
-### 查看数据
-- **位置标签**: 查看GPS位置记录
-- **应用使用标签**: 查看应用使用统计
-- **设备信息标签**: 查看设备状态信息
+### View Data
+- **Location Tab**: View GPS location records
+- **App Usage Tab**: View app usage statistics
+- **Device Info Tab**: View device status information
 
-### 停止追踪
-- 点击"停止追踪"按钮
-- 或通过系统设置强制停止应用
+### Stop Tracking
+- Click "Stop Tracking" button
+- Or force stop the app through system settings
 
-## 数据安全
+## Data Security
 
-- 所有数据仅存储在设备本地
-- 不会向任何服务器发送数据
-- 应用完全离线工作
-- 数据使用SQLite加密存储
+- All data is stored locally on the device only
+- No data is sent to any server
+- The app works completely offline
+- Data is stored using SQLite encryption
 
-## 注意事项
+## Important Notes
 
-1. **电池优化**: 建议将应用加入电池优化白名单
-2. **权限管理**: 需要手动授予使用统计权限
-3. **存储空间**: 长期使用可能占用较多存储空间
-4. **隐私保护**: 请确保设备安全，避免数据泄露
+1. **Battery Optimization**: It's recommended to add the app to battery optimization whitelist
+2. **Permission Management**: Usage statistics permission needs to be granted manually
+3. **Storage Space**: Long-term use may occupy significant storage space
+4. **Privacy Protection**: Please ensure device security to avoid data leakage
 
-## 开发环境
+## Development Environment
 
-- Android Studio Arctic Fox 或更高版本
+- Android Studio Arctic Fox or higher
 - Kotlin 1.9.22
 - Android Gradle Plugin 8.2.2
-- 最低SDK: API 24 (Android 7.0)
-- 目标SDK: API 34 (Android 14)
+- Minimum SDK: API 24 (Android 7.0)
+- Target SDK: API 34 (Android 14)
 
-## 构建说明
+## Build Instructions
 
-1. 克隆项目到本地
-2. 在Android Studio中打开项目
-3. 同步Gradle依赖
-4. 连接Android设备或启动模拟器
-5. 点击运行按钮构建并安装应用
+1. Clone the project to local
+2. Open the project in Android Studio
+3. Sync Gradle dependencies
+4. Connect Android device or start emulator
+5. Click the run button to build and install the app
 
-## 许可证
+## License
 
-本项目仅供学习和研究使用，请遵守当地法律法规。
+This project is for learning and research purposes only. Please comply with local laws and regulations.
 
-## 免责声明
+## Disclaimer
 
-本应用仅用于设备管理和个人数据追踪，开发者不对任何滥用行为承担责任。用户应确保遵守相关法律法规和隐私政策。 
+This app is only for device management and personal data tracking. The developer is not responsible for any misuse. Users should ensure compliance with relevant laws and regulations and privacy policies. 

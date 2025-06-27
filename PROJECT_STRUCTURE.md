@@ -1,126 +1,126 @@
-# 项目结构说明
+# Project Structure Documentation
 
 ```
 Finder/
-├── app/                                    # 应用模块
-│   ├── build.gradle                       # 应用级构建配置
+├── app/                                    # Application module
+│   ├── build.gradle                       # App-level build configuration
 │   └── src/main/
 │       ├── java/com/finder/tracker/
-│       │   ├── MainActivity.kt            # 主活动
-│       │   ├── adapter/                   # RecyclerView适配器
-│       │   │   ├── LocationAdapter.kt     # 位置数据适配器
-│       │   │   ├── AppUsageAdapter.kt     # 应用使用适配器
-│       │   │   └── DeviceInfoAdapter.kt   # 设备信息适配器
-│       │   ├── data/                      # 数据层
-│       │   │   ├── AppDatabase.kt         # Room数据库
-│       │   │   ├── dao/                   # 数据访问对象
-│       │   │   │   ├── LocationDao.kt     # 位置数据DAO
-│       │   │   │   ├── AppUsageDao.kt     # 应用使用DAO
-│       │   │   │   └── DeviceInfoDao.kt   # 设备信息DAO
-│       │   │   ├── entity/                # 数据实体
-│       │   │   │   ├── LocationData.kt    # 位置数据实体
-│       │   │   │   ├── AppUsageData.kt    # 应用使用实体
-│       │   │   │   └── DeviceInfo.kt      # 设备信息实体
-│       │   │   └── util/                  # 数据工具
-│       │   │       └── Converters.kt      # Room类型转换器
-│       │   ├── repository/                # 仓库层
-│       │   │   └── TrackingRepository.kt  # 追踪数据仓库
-│       │   ├── service/                   # 服务层
-│       │   │   └── TrackingService.kt     # 前台追踪服务
-│       │   ├── util/                      # 工具类
-│       │   │   └── DeviceInfoCollector.kt # 设备信息收集器
-│       │   └── viewmodel/                 # 视图模型
-│       │       └── MainViewModel.kt       # 主视图模型
-│       ├── res/                           # 资源文件
-│       │   ├── drawable/                  # 图标和图片
-│       │   │   ├── ic_tracking.xml        # 追踪图标
-│       │   │   ├── ic_launcher_foreground.xml # 启动器图标
-│       │   │   └── ic_launcher_background.xml # 启动器背景
-│       │   ├── layout/                    # 布局文件
-│       │   │   ├── activity_main.xml      # 主活动布局
-│       │   │   ├── item_location.xml      # 位置项布局
-│       │   │   ├── item_app_usage.xml     # 应用使用项布局
-│       │   │   └── item_device_info.xml   # 设备信息项布局
-│       │   ├── mipmap-anydpi-v26/         # 启动器图标
-│       │   │   ├── ic_launcher.xml        # 启动器图标
-│       │   │   └── ic_launcher_round.xml  # 圆形启动器图标
-│       │   ├── values/                    # 值资源
-│       │   │   ├── colors.xml             # 颜色定义
-│       │   │   ├── strings.xml            # 字符串资源
-│       │   │   ├── themes.xml             # 主题定义
-│       │   │   └── ic_launcher_background.xml # 启动器背景色
-│       │   └── xml/                       # XML配置文件
-│       │       ├── backup_rules.xml       # 备份规则
-│       │       └── data_extraction_rules.xml # 数据提取规则
-│       └── AndroidManifest.xml            # 应用清单文件
-├── build.gradle                           # 项目级构建配置
-├── settings.gradle                        # 项目设置
-├── gradle/wrapper/                        # Gradle包装器
-│   └── gradle-wrapper.properties          # Gradle版本配置
-├── app/proguard-rules.pro                 # 代码混淆规则
-├── build.bat                              # Windows构建脚本
-├── build.sh                               # Linux/Mac构建脚本
-├── README.md                              # 项目说明文档
-└── PROJECT_STRUCTURE.md                   # 项目结构说明
+│       │   ├── MainActivity.kt            # Main activity
+│       │   ├── adapter/                   # RecyclerView adapters
+│       │   │   ├── LocationAdapter.kt     # Location data adapter
+│       │   │   ├── AppUsageAdapter.kt     # App usage adapter
+│       │   │   └── DeviceInfoAdapter.kt   # Device info adapter
+│       │   ├── data/                      # Data layer
+│       │   │   ├── AppDatabase.kt         # Room database
+│       │   │   ├── dao/                   # Data access objects
+│       │   │   │   ├── LocationDao.kt     # Location data DAO
+│       │   │   │   ├── AppUsageDao.kt     # App usage DAO
+│       │   │   │   └── DeviceInfoDao.kt   # Device info DAO
+│       │   │   ├── entity/                # Data entities
+│       │   │   │   ├── LocationData.kt    # Location data entity
+│       │   │   │   ├── AppUsageData.kt    # App usage entity
+│       │   │   │   └── DeviceInfo.kt      # Device info entity
+│       │   │   └── util/                  # Data utilities
+│       │   │       └── Converters.kt      # Room type converters
+│       │   ├── repository/                # Repository layer
+│       │   │   └── TrackingRepository.kt  # Tracking data repository
+│       │   ├── service/                   # Service layer
+│       │   │   └── TrackingService.kt     # Foreground tracking service
+│       │   ├── util/                      # Utility classes
+│       │   │   └── DeviceInfoCollector.kt # Device info collector
+│       │   └── viewmodel/                 # View models
+│       │       └── MainViewModel.kt       # Main view model
+│       ├── res/                           # Resource files
+│       │   ├── drawable/                  # Icons and images
+│       │   │   ├── ic_tracking.xml        # Tracking icon
+│       │   │   ├── ic_launcher_foreground.xml # Launcher icon
+│       │   │   └── ic_launcher_background.xml # Launcher background
+│       │   ├── layout/                    # Layout files
+│       │   │   ├── activity_main.xml      # Main activity layout
+│       │   │   ├── item_location.xml      # Location item layout
+│       │   │   ├── item_app_usage.xml     # App usage item layout
+│       │   │   └── item_device_info.xml   # Device info item layout
+│       │   ├── mipmap-anydpi-v26/         # Launcher icons
+│       │   │   ├── ic_launcher.xml        # Launcher icon
+│       │   │   └── ic_launcher_round.xml  # Round launcher icon
+│       │   ├── values/                    # Value resources
+│       │   │   ├── colors.xml             # Color definitions
+│       │   │   ├── strings.xml            # String resources
+│       │   │   ├── themes.xml             # Theme definitions
+│       │   │   └── ic_launcher_background.xml # Launcher background color
+│       │   └── xml/                       # XML configuration files
+│       │       ├── backup_rules.xml       # Backup rules
+│       │       └── data_extraction_rules.xml # Data extraction rules
+│       └── AndroidManifest.xml            # Application manifest file
+├── build.gradle                           # Project-level build configuration
+├── settings.gradle                        # Project settings
+├── gradle/wrapper/                        # Gradle wrapper
+│   └── gradle-wrapper.properties          # Gradle version configuration
+├── app/proguard-rules.pro                 # Code obfuscation rules
+├── build.bat                              # Windows build script
+├── build.sh                               # Linux/Mac build script
+├── README.md                              # Project documentation
+└── PROJECT_STRUCTURE.md                   # Project structure documentation
 
 ```
 
-## 架构说明
+## Architecture Overview
 
-### 1. 数据层 (Data Layer)
-- **Entity**: 定义数据库表结构
-- **DAO**: 数据访问对象，定义数据库操作
-- **Database**: Room数据库配置
-- **Repository**: 数据仓库，统一数据访问接口
+### 1. Data Layer
+- **Entity**: Defines database table structures
+- **DAO**: Data access objects, defines database operations
+- **Database**: Room database configuration
+- **Repository**: Data repository, unified data access interface
 
-### 2. 业务层 (Business Layer)
-- **ViewModel**: 视图模型，处理业务逻辑
-- **Service**: 后台服务，执行追踪任务
-- **Util**: 工具类，提供辅助功能
+### 2. Business Layer
+- **ViewModel**: View models, handles business logic
+- **Service**: Background services, executes tracking tasks
+- **Util**: Utility classes, provides helper functions
 
-### 3. 表现层 (Presentation Layer)
-- **Activity**: 用户界面活动
-- **Adapter**: RecyclerView适配器
-- **Layout**: 界面布局文件
+### 3. Presentation Layer
+- **Activity**: User interface activities
+- **Adapter**: RecyclerView adapters
+- **Layout**: Interface layout files
 
-### 4. 资源层 (Resource Layer)
-- **Drawable**: 图标和图片资源
-- **Layout**: 界面布局定义
-- **Values**: 颜色、字符串、主题等资源
-- **XML**: 配置文件
+### 4. Resource Layer
+- **Drawable**: Icons and image resources
+- **Layout**: Interface layout definitions
+- **Values**: Colors, strings, themes and other resources
+- **XML**: Configuration files
 
-## 数据流
+## Data Flow
 
 ```
-用户操作 → Activity → ViewModel → Repository → DAO → Database
+User Action → Activity → ViewModel → Repository → DAO → Database
                 ↓
-            Adapter → RecyclerView → 用户界面
+            Adapter → RecyclerView → User Interface
 ```
 
-## 主要组件
+## Main Components
 
-### 核心服务
-- **TrackingService**: 前台服务，负责数据收集
-- **DeviceInfoCollector**: 设备信息收集工具
-- **TrackingRepository**: 数据仓库，统一数据访问
+### Core Services
+- **TrackingService**: Foreground service, responsible for data collection
+- **DeviceInfoCollector**: Device information collection tool
+- **TrackingRepository**: Data repository, unified data access
 
-### 数据实体
-- **LocationData**: 位置信息
-- **AppUsageData**: 应用使用统计
-- **DeviceInfo**: 设备状态信息
+### Data Entities
+- **LocationData**: Location information
+- **AppUsageData**: App usage statistics
+- **DeviceInfo**: Device status information
 
-### 用户界面
-- **MainActivity**: 主界面，包含三个标签页
-- **LocationAdapter**: 位置数据显示
-- **AppUsageAdapter**: 应用使用数据显示
-- **DeviceInfoAdapter**: 设备信息显示
+### User Interface
+- **MainActivity**: Main interface, contains three tabs
+- **LocationAdapter**: Location data display
+- **AppUsageAdapter**: App usage data display
+- **DeviceInfoAdapter**: Device information display
 
-## 技术栈
+## Technology Stack
 
-- **Kotlin**: 主要开发语言
-- **Room**: 本地数据库
-- **Coroutines**: 异步处理
-- **ViewModel**: 架构组件
-- **Material Design**: UI设计规范
-- **RecyclerView**: 列表显示
-- **Service**: 后台服务 
+- **Kotlin**: Primary development language
+- **Room**: Local database
+- **Coroutines**: Asynchronous processing
+- **ViewModel**: Architecture components
+- **Material Design**: UI design specifications
+- **RecyclerView**: List display
+- **Service**: Background services 
