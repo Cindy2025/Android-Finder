@@ -118,4 +118,4 @@ This project is for learning and research purposes only. Please comply with loca
 
 ## Disclaimer
 
-This app is only for device management and personal data tracking. The developer is not responsible for any misuse. Users should ensure compliance with relevant laws and regulations and privacy policies. 
+This app is only for device management and personal data tracking. The developer is not responsible for any misuse. Users should ensure compliance with relevant laws and regulations and privacy policies.
